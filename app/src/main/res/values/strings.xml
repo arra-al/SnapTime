@@ -1,0 +1,122 @@
+<?xml version="1.0" encoding="utf-8" standalone="no"?>
+<resources>
+    <string name="app_name">Snap Time</string>
+    <string name="tvThirdEmailAddresses">Third Party Email Address</string>
+    <string name="new_game">New Game</string>
+    <string name="help">Help</string>
+    <string name="msgTapCap">TAP to capture and email photo</string>
+    <string name="msgTapCapVideo">TAP to capture and email video</string>
+    <string name="msgTapCapEnd">TAP to end recording and email video</string>
+    <string name="btnAddEmailAdress">Add Email Address</string>
+    <string name="btnHouseMother">House Mother</string>
+    <string name="btnSave">Save</string>
+    <string name="btnBack">Back</string>
+    <string name="btnDelete">Delete</string>
+    <string name="btnCancel">Cancel</string>
+    <string name="tvOptions">Options</string>
+    <string name="tvSafeWarnAlert">Safe Warning Alert</string>
+    <string name="tvIsGroupActive">Enable group</string>
+    <string name="tvEmailAddressDetail">Email Address Details</string>
+    <string name="tvGroupContactsDetail">Group Contacts Details</string>
+    <string name="tvImgInfoDateCaptured">Captured Date:</string>
+    <string name="btnImgInfoMapLocation">Map Location</string>
+    <string name="etEmail">Email</string>
+    <string name="etName">Name</string>
+    <string name="etPhone">Phone Number</string>
+    <string name="etPhoneNumber">Phone Number</string>
+    <string name="imgVEditDescr">Edit</string>
+    <string name="btnNewPhoneNr">Add New Phone Number</string>
+    <string name="tvUrPhoneNr">Your Phone Numbers</string>
+    <string name="tvAddInfo">Add Info</string>
+    <string name="addNewGroup">Add New Group</string>
+    <string name="groupInUse">In Use</string>
+    <string name="sharedPreferencesFile">shared_pref_file</string>
+    <string name="msgSavigData">Saving data …</string>
+    <string name="defaultLanguage">English</string>
+    <string name="msgTurningBack">Turning Back …</string>
+    <string name="lblSettings">Settings</string>
+    <string name="msgRestartApp">You should restart your application to see effects of your new settings</string>
+    <string name="msgErrorSavingVideo">Video wasn\'t save …</string>
+    <string name="msgImgSent">This image has been emailed to third parties with time, date, and GPS location.</string>
+    <string name="msgVideoSent">This video has been emailed to third parties with time, date, and GPS location.</string>
+    <string name="msgErrorSendingEmail">Error sending email !</string>
+    <string name="msgErrorEmptyValue">Please fill with data empty fields !</string>
+    <string name="msgInsertionSucc">Data inserted successfully</string>
+    <string name="msgInsertionError">Error inserting data</string>
+    <string name="msgEmailExists">This email already exists in your email contacts!</string>
+    <string name="msgGroupExists">"This group already exists in your group list!"</string>
+    <string name="msgDeleteSucc">Data deleted successfully</string>
+    <string name="msgDeleteError">Error removing data</string>
+    <string name="msgDeleteMedia">Delete file ?</string>
+    <string name="msgNoMedia">There is no photo or video in db !</string>
+    <string name="msgMRecMaxDurReached">Max Duration reached. Media recorder is going to stop …</string>
+    <string name="msgMRecMaxFileSizeReached">There is no more space left. Media recorder is going to stop …</string>
+    <string name="msgMRecErrorWhileRec">An error happend while recording. Media recorder is going to stop …</string>
+    <string name="msgErrorDelFile">Error deleting file</string>
+    <string name="msgSuccDelFile">Successfully deleted.</string>
+    <string-array name="ctxMenuArray">
+        <item>Edit</item>
+        <item>Delete</item>
+        <item>None</item>
+    </string-array>
+    <string name="imgSafeWarn">Image Safe Warning</string>
+    <string name="uPhoneNr">Your Phone Number</string>
+    <string name="langSel">Language Selection</string>
+    <string-array name="appLangSel">
+        <item>German</item>
+        <item>English</item>
+        <item>Italian</item>
+        <item>French</item>
+        <item>Spanish</item>
+    </string-array>
+    <string name="tvSetupTips">Setup Tips</string>
+    <string name="msgSetupTips">KEY_INTRO TEXT" = "FIRST TIME USERS OF GuardSnap \n \
+
+* Make sure you have already set up your phones normal emailing capability which allows you to attach photos to your emails.\n \
+
+* Make sure you have already set up your phones normal camera operations which allow you to take and send images from your phone to email recipients.\n \
+
+IN THE GUARDSNAP SET UP SCREENS \n \
+
+Under “Add Group”   \n \
+
+* First, you can set up four separate “groups” of people from only one person, or up to five individuals in each group. Give each group a name, like roommate(s), friends, family, sister, or house mother. \n \
+
+* Second, you then set the “Enable” switch to send or not send images to this specific group. \n \
+
+* Third, under Add emails, you enter the names and email addresses of those individuals you want in this group. Photos are sent to all members of any group you “Enabled” under “Group Settings”. \n \
+
+Under “Alerts” \n \
+
+* First, always keep the “Safe Warning Alert “in the “ON” position. This provides the warning overlay for the last photo you have taken or when you recall one of the previous photos you have taken. The warning overlay only shows on your display when you recall the photos taken.   The warning overlay is not sent with your photos to your email recipients   \n \
+
+* Second, enter your name and phone number, which will show up in the emails of images you send to your groups or single individual.  \n \
+
+* Third, select the language you want to use for the warning overlay on images.   \n \
+
+* When you set up the emails for those individuals that will potentially be sent images, make sure you contact them and share the GuardSnap APP with them and let them know that they may be receiving images from you. \n \
+
+* The images are accessed from a link on the recipients email. The link is operable for only 30 days. If a recipient wishes to “permanently” keep an image or video, then the image(s) must be “saved” to a file on their system. \n \
+
+* You may want to enter your own email address as one of the Group recipients so you will have the capability to “Save” to a permanent file any images or videos you may send. \n \
+
+* Recipients cannot reply to the email containing the images. It comes from a NO-Reply service. One may use GuardSnap.com site to access GuardSnap information, as well as to learn of the many other uses for Guard Snaps features and benefits. \n \
+
+* If you are inside with heavy or dense construction above and around you, the GPS function may be negatively affected and not transmit the GPS locations, but the image with time and date will still be sent. \n \
+
+* If your phone allows you to turn off the “Click” sound for taking photos you may want to do so if you anticipate using GuardSnap. \n \
+
+* You may want to turn off the photo “Flash” if your phone allows that, but first test the quality of photos taken in dim light before you elect to use a no flash setting. \n \
+
+* Videos automatically terminated” and sent every 30 sec. for security reasons. So you MUST touch the screen at the end of the automatic stop point, to continue taking more video. At the automatic termination point, the top of the view screen will alert you to “tap” the screen to take further videos. \n \
+
+* When meeting someone for business or socially for the first time, discreetly, take a photo of that person, vehicle or license plate. It will then be available at a later time to instantly display with the warning message overlay should any unwanted advances occur. \n \
+
+* Or simply take a photo at any time of stress or uncertainty, and instantly display it to the person. Knowing they are not anonymous, and their image with time, date and GPS location has “already” been transmitted to others, may deter them from uninvited advances or actions. \n \
+
+* The ability to “IMMEDIATELY” show a potential aggressor a photo “WITH THE WARNING OVERLAY” is the single most valuable feature of GuardSnap! \n \
+
+**Make sure you always click “Done” and completely close the APP after every use or editing. This will insure that each time you open the APP, it is in a view screen ready to take a one touch photo.  If you do not completely close the APP, it will stay open in the background and open at the last place you left it</string>
+    <string name="lblMediaBrowser">Media List</string>
+    <string name="etPhoneNumberName">Phone Number Name</string>
+</resources>
