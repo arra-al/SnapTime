@@ -13,47 +13,79 @@ import android.view.Menu;
 import android.view.MenuItem;
 import android.view.View;
 import android.view.ViewGroup;
+import android.webkit.WebView;
+import android.webkit.WebViewClient;
 import android.widget.AdapterView;
 import android.widget.BaseAdapter;
 import android.widget.GridView;
 import android.widget.ImageView;
-import android.widget.TextView;
 
 import com.squareup.picasso.Picasso;
+
+import org.json.JSONException;
+import org.json.JSONObject;
 
 import java.net.MalformedURLException;
 import java.net.URI;
 import java.net.URISyntaxException;
 import java.net.URL;
 
+import al.arra.api.flickr.ServiceBuilder;
+import al.arra.api.flickr.api.FlickrAPI;
+import al.arra.api.flickr.model.HTTPMethod;
+import al.arra.api.flickr.model.HTTPResponse;
+import al.arra.api.flickr.model.OAuthRequest;
+import al.arra.api.flickr.model.Token;
+import al.arra.api.flickr.model.Verifier;
+import al.arra.api.flickr.oauth.OAuthService;
+import al.arra.snaptime.constant.AppConstants;
+import al.arra.snaptime.util.OauthAsync;
+
 public class MainActivity extends BaseActivity {
+    private static final String TAG = "MainActivity";
     private static final int REQUEST_IMAGE_CAPTURE = 1;
 
+    private OauthAsync oauthTask;
     private DrawerLayout drawer;
+
+    private boolean isLoggedIn = false;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setActionBarIcon(R.drawable.ic_ab_drawer);
 
-        GridView gridView = (GridView) findViewById(R.id.gridView);
-        gridView.setAdapter(new GridViewAdapter());
-        gridView.setOnItemClickListener(new AdapterView.OnItemClickListener() {
-            @Override
-            public void onItemClick(AdapterView<?> adapterView, View view, int i, long l) {
-                String url = (String) view.getTag();
-                Log.i("MainActivity", "url : " + url);
-            }
-        });
+        if(isLoggedIn) {
+            setActionBarIcon(R.drawable.ic_ab_drawer);
 
-        drawer = (DrawerLayout) findViewById(R.id.drawer);
-        drawer.setDrawerShadow(R.drawable.drawer_shadow, GravityCompat.START);
+            GridView gridView = (GridView) findViewById(R.id.gridView);
+            gridView.setNumColumns(2);
+            gridView.setAdapter(new GridViewAdapter());
+            gridView.setOnItemClickListener(new AdapterView.OnItemClickListener() {
+                @Override
+                public void onItemClick(AdapterView<?> adapterView, View view, int i, long l) {
+                    String url = (String) view.getTag();
+                    Log.i("MainActivity", "url : " + url);
+                }
+            });
+
+            drawer = (DrawerLayout) findViewById(R.id.drawer);
+            drawer.setDrawerShadow(R.drawable.drawer_shadow, GravityCompat.START);
+        } else {
+            oauthTask = new OauthAsync(getApplicationContext(), (WebView)findViewById(R.id.webView));
+            oauthTask.execute();
+            //attach WebViewClient to intercept the callback url
+
+        }
         //dispatchTakePictureIntent();
     }
 
     @Override
     protected int getLayoutResource() {
-        return R.layout.activity_main;
+        int layout = R.layout.activity_main;
+        if(!isLoggedIn) {
+            layout = R.layout.authenticate;
+        }
+        return layout;
     }
 
     @Override
@@ -98,6 +130,7 @@ public class MainActivity extends BaseActivity {
             Bundle extras = data.getExtras();
             Bitmap imageBitmap = (Bitmap) extras.get("data");
             Log.i(getClass().getCanonicalName(), "onActivityResult");
+
             //mImageView.setImageBitmap(imageBitmap);
         }
     }
@@ -174,9 +207,6 @@ public class MainActivity extends BaseActivity {
                     .resize(50, 50)
                     .centerCrop()
                     .into(image);
-
-            TextView text = (TextView) view.findViewById(R.id.text);
-            text.setText(getItem(i).toString());
 
             return view;
         }

@@ -15,13 +15,13 @@ import al.arra.api.flickr.oauth.OAuthService;
  * Created by Gezim on 11/8/2015.
  */
 public class FlickrTestCase {
-    public static final String API_KEY = "";
-    public static final String API_SECRET = "";
+    public static final String API_KEY = "8c54e8144fd85f6fb3c9b0a62a2f0b50";
+    public static final String API_SECRET = "48719b0913f26618";
     private static final String PROTECTED_RESOURCE_URL = "https://api.flickr.com/services/rest/";
 
     public static void main(String[] args) {
         // Replace these with your own api key and secret
-        OAuthService service = new ServiceBuilder().provider(FlickrAPI.class).apiKey(API_KEY).apiSecret(API_SECRET).build();
+        OAuthService service = new ServiceBuilder().flickrService(API_KEY, API_SECRET);//provider(FlickrAPI.class).apiKey(API_KEY).apiSecret(API_SECRET).build();
 
 
         System.out.println("=== Flickr's OAuth Workflow ===");

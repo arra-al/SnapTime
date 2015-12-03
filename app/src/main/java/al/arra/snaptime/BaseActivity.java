@@ -1,5 +1,6 @@
 package al.arra.snaptime;
 
+import android.content.SharedPreferences;
 import android.os.Bundle;
 import android.support.v7.app.AppCompatActivity;
 import android.support.v7.widget.Toolbar;
@@ -9,6 +10,9 @@ import android.support.v7.widget.Toolbar;
  */
 public abstract class BaseActivity extends AppCompatActivity {
     private Toolbar toolbar;
+
+    private static SharedPreferences SHARED_PREF;
+    private static SharedPreferences.Editor EDITOR_SHARED_PREF;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {

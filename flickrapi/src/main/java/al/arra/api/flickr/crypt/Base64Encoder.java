@@ -17,14 +17,7 @@ public abstract class Base64Encoder {
 
     private static Base64Encoder createEncoderInstance()
     {
-        if (CommonsEncoder.isPresent())
-        {
-            return new CommonsEncoder();
-        }
-        else
-        {
-            return new DatatypeConverterEncoder();
-        }
+        return new CommonsEncoder();
     }
 
     public static String type()

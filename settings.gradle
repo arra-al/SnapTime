@@ -1,1 +1,1 @@
-include ':app', ':flickrapi'
+include ':app', ':flickrapi',  ':'

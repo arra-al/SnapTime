@@ -58,10 +58,8 @@ public class OAuthConfig {
         return scope != null;
     }
 
-    public void log(String message)
-    {
-        if (debugStream != null)
-        {
+    public void log(String message) {
+        if (debugStream != null) {
             message = message + "\n";
             try
             {

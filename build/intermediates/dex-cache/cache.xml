@@ -2,11 +2,46 @@
 <items version="2" >
 
     <item
+        jar="C:\Users\user\AndroidStudioProjects\SnapTime\app\build\intermediates\exploded-aar\SnapTime\flickrapi\unspecified\jars\classes.jar"
+        jumboMode="false"
+        revision="23.0.1"
+        sha1="e1da3c72f34a351c0db3c64005e807c55c673a5b">
+        <dex dex="C:\Users\user\AndroidStudioProjects\SnapTime\app\build\intermediates\pre-dexed\debug\classes-29c73b036272516c7036e724017b7450d9be46b5.jar" />
+    </item>
+    <item
+        jar="C:\Users\user\AndroidStudioProjects\SnapTime\app\build\intermediates\exploded-aar\com.android.support\appcompat-v7\23.1.0\jars\classes.jar"
+        jumboMode="false"
+        revision="23.0.1"
+        sha1="57ae0d750ff83f0c738d21720224ac7ea866a094">
+        <dex dex="C:\Users\user\AndroidStudioProjects\SnapTime\app\build\intermediates\pre-dexed\debug\classes-d7a6e17db054ac4134c1a47c586258660e735c44.jar" />
+    </item>
+    <item
         jar="C:\Users\user\.gradle\caches\modules-2\files-2.1\com.squareup.picasso\picasso\2.5.2\7446d06ec8d4f7ffcc53f1da37c95f200dcb9387\picasso-2.5.2.jar"
         jumboMode="false"
         revision="23.0.1"
         sha1="7446d06ec8d4f7ffcc53f1da37c95f200dcb9387">
         <dex dex="C:\Users\user\AndroidStudioProjects\SnapTime\app\build\intermediates\pre-dexed\debug\picasso-2.5.2-a69735fb31405abb6c5b972e1b2bb4f918f620e8.jar" />
+    </item>
+    <item
+        jar="C:\Users\user\AppData\Local\Android\sdk\extras\android\m2repository\com\android\support\support-annotations\23.1.0\support-annotations-23.1.0.jar"
+        jumboMode="false"
+        revision="23.0.1"
+        sha1="92e3fc113ec3ee36b64603a38857b95700025633">
+        <dex dex="C:\Users\user\AndroidStudioProjects\SnapTime\app\build\intermediates\pre-dexed\debug\support-annotations-23.1.0-663270283fa374e7034b14be5a187e68c8881c63.jar" />
+    </item>
+    <item
+        jar="C:\Users\user\AndroidStudioProjects\SnapTime\app\build\intermediates\exploded-aar\com.android.support\support-v4\23.1.0\jars\classes.jar"
+        jumboMode="false"
+        revision="23.0.1"
+        sha1="ddde541c289c8b816a8f8fd6c325d80788c522a6">
+        <dex dex="C:\Users\user\AndroidStudioProjects\SnapTime\app\build\intermediates\pre-dexed\debug\classes-951e8ac275ea69d456cf07bf108938f1ff2c834d.jar" />
+    </item>
+    <item
+        jar="C:\Users\user\AndroidStudioProjects\SnapTime\app\build\intermediates\exploded-aar\com.android.support\support-v4\23.1.0\jars\libs\internal_impl-23.1.0.jar"
+        jumboMode="false"
+        revision="23.0.1"
+        sha1="8716243bf04bae8d6c9ca94d27b9a9be7236f0a3">
+        <dex dex="C:\Users\user\AndroidStudioProjects\SnapTime\app\build\intermediates\pre-dexed\debug\internal_impl-23.1.0-ab34ab6ea246d31b1d803fe28f526bc085fcc374.jar" />
     </item>
 
 </items>

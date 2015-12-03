@@ -44,6 +44,19 @@ public class ServiceBuilder {
         return this;
     }
 
+    public <S extends OAuthService> S getService(String apiKey, String apiSecret) {
+
+        return null;
+    }
+
+    public OAuthService flickrService(String apiKey, String apiSecret) {
+        this.api = new FlickrAPI();
+        this.apiKey = apiKey;
+        this.apiSecret = apiSecret;
+
+        return build();
+    }
+
     private FlickrAPI createApi(Class<FlickrAPI> apiClass)
     {
         Validation.checkNotNull(apiClass, "Api class cannot be null");

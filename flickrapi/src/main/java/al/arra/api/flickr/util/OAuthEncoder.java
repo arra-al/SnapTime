@@ -28,6 +28,11 @@ public class OAuthEncoder {
 
     private OAuthEncoder(){}
 
+    /**
+     * url encoder
+     * @param plain
+     * @return
+     */
     public static String encode(String plain)
     {
         Validation.checkNotNull(plain, "Cannot encode null object");
@@ -52,6 +57,11 @@ public class OAuthEncoder {
         return encoded.replaceAll(Pattern.quote(toReplace), replacement);
     }
 
+    /**
+     * url decoder
+     * @param encoded
+     * @return
+     */
     public static String decode(String encoded)
     {
         Validation.checkNotNull(encoded, "Cannot decode null object");

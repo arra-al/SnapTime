@@ -1,6 +1,6 @@
 package al.arra.api.flickr.crypt;
 
-import org.apache.commons.codec.binary.Base64;
+//import org.apache.commons.codec.binary.Base64;
 
 import java.io.UnsupportedEncodingException;
 
@@ -15,32 +15,22 @@ public class CommonsEncoder extends Base64Encoder
     @Override
     public String encode(byte[] bytes)
     {
-        try
-        {
-            return new String(Base64.encodeBase64(bytes), "UTF-8");
-        }
-        catch (UnsupportedEncodingException e)
-        {
+/*        byte[] encBytes = Base64.encode(bytes, Base64.DEFAULT);
+        try {
+            return new String(encBytes, "UTF-8");
+
+        } catch (UnsupportedEncodingException e) {
             throw new OAuthSignatureException("Can't perform base64 encoding", e);
-        }
+        } catch (NullPointerException e) {
+            throw new OAuthSignatureException("Can't perform base64 encoding. Null value", e);
+        }*/
+        return Base64.encodeBytes(bytes);//encodeToString(bytes, Base64.URL_SAFE);
+
     }
 
     @Override
     public String getType()
     {
-        return "CommonsCodec";
-    }
-
-    public static boolean isPresent()
-    {
-        try
-        {
-            Class.forName("org.apache.commons.codec.binary.Base64");
-            return true;
-        }
-        catch (ClassNotFoundException e)
-        {
-            return false;
-        }
+        return "android.util.Base64";
     }
 }

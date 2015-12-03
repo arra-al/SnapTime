@@ -13,6 +13,8 @@ import al.arra.api.flickr.oauth.OAuthService;
 
 public class FlickrAPI {
 
+    public static final String PROTECTED_RESOURCE_URL = "https://api.flickr.com/services/rest/";
+
     public static final String ACCESS_TOKEN_ENDPOINT = "https://www.flickr.com/services/oauth/access_token";
     public static final String REQUEST_TOKEN_ENDPOINT = "https://www.flickr.com/services/oauth/request_token";
     public static final String AUTHORIZATION_URL = "https://www.flickr.com/services/oauth/authorize?oauth_token";

@@ -95,7 +95,7 @@ public class HTTPRequest {
         return querystringParams.appendTo(url);
     }
 
-    HTTPResponse doSend(RequestTracker tuner) throws IOException
+    public HTTPResponse doSend(RequestTracker tuner) throws IOException
     {
         connection.setRequestMethod(this.httpMethod.name());
         if (connectTimeout != null)
